@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>com.sairic.intellij.prependstorynumber</id>
+    <name>Prepend Story Number</name>
+    <version>1.1</version>
+    <vendor email="ricardo@sairic-consulting.com" url="https://sairic-consulting.com">Sairic Consulting</vendor>
+    
+    <description><![CDATA[
+    <p>Adds a button to the commit dialog (right above the commit message field), that will take your branch name
+    for example, feature/project1-345,  and prepend PROJECT1-345 to the commit message. Notice it will be in uppercase</p>
+    ]]></description>
+    
+    <change-notes><![CDATA[
+    <p>1.1</p>
+    <ul>
+        <li>Fixed: Initial release</li>
+    </ul>
+    <p>1.0</p>
+    <ul>
+        <li>Initial release</li>
+    </ul>
+    ]]>
+    </change-notes>
+    
+    <idea-version since-build="135.1230"/>
+    <depends>com.intellij.modules.vcs</depends>
+    <depends>Git4Idea</depends>
+    
+    <actions>
+        <action id="WhatTheCommit.Button" class="com.sairic.idea.plugins.StoryPrependPlugin"
+                text="Prepend Story Number"
+                description="Load random message" icon="/META-INF/icons/script.png">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
